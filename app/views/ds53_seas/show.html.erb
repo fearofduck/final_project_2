@@ -1,0 +1,64 @@
+<div class="page-header">
+  <h3>Ds53 Sea #<%= @ds53_sea.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Jan</dt>
+      <dd><%= @ds53_sea.jan %></dd>
+
+      <dt>Feb</dt>
+      <dd><%= @ds53_sea.feb %></dd>
+
+      <dt>Mar</dt>
+      <dd><%= @ds53_sea.mar %></dd>
+
+      <dt>Apr</dt>
+      <dd><%= @ds53_sea.apr %></dd>
+
+      <dt>May</dt>
+      <dd><%= @ds53_sea.may %></dd>
+
+      <dt>Jun</dt>
+      <dd><%= @ds53_sea.jun %></dd>
+
+      <dt>Jul</dt>
+      <dd><%= @ds53_sea.jul %></dd>
+
+      <dt>Aug</dt>
+      <dd><%= @ds53_sea.aug %></dd>
+
+      <dt>Sep</dt>
+      <dd><%= @ds53_sea.sep %></dd>
+
+      <dt>Oct</dt>
+      <dd><%= @ds53_sea.oct %></dd>
+
+      <dt>Nov</dt>
+      <dd><%= @ds53_sea.nov %></dd>
+
+      <dt>Dec</dt>
+      <dd><%= @ds53_sea.dec %></dd>
+
+      <dt>Name</dt>
+      <dd><%= @ds53_sea.name %></dd>
+
+      <dt>User</dt>
+      <dd><%= @ds53_sea.user_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/ds53_seas" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/ds53_seas/<%= @ds53_sea.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_ds53_sea/<%= @ds53_sea.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
