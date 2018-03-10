@@ -44,8 +44,11 @@
         <td><%= conv_sea.user.email %></td>
         <td>
           <a href="/conv_seas/<%= conv_sea.id %>" class="btn btn-primary">Show</a>
-          <a href="/conv_seas/<%= conv_sea.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_conv_sea/<%= conv_sea.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          
+          <% if current_user == conv_sea.user %>
+            <a href="/conv_seas/<%= conv_sea.id %>/edit" class="btn btn-warning">Edit</a>
+            <a href="/delete_conv_sea/<%= conv_sea.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <% end %>
         </td>
       </tr>
       <% end %>

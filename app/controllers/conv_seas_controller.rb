@@ -1,4 +1,14 @@
 class ConvSeasController < ApplicationController
+  before_action :current_user_must_be_conv_sea_user, :only => [:edit, :update, :destroy]
+
+  def current_user_must_be_conv_sea_user
+    conv_sea = ConvSea.find(params[:id])
+
+    unless current_user == conv_sea.user
+      redirect_to :back, :alert => "You are not authorized for that."
+    end
+  end
+
   def index
     @conv_seas = ConvSea.all
 
