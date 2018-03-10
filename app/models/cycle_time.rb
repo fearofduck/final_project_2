@@ -1,6 +1,9 @@
 class CycleTime < ApplicationRecord
   # Direct associations
 
+  has_many   :forecasts,
+             :dependent => :destroy
+
   belongs_to :conv_ct
 
   belongs_to :ds53_ct
