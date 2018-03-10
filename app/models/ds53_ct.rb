@@ -1,6 +1,9 @@
 class Ds53Ct < ApplicationRecord
   # Direct associations
 
+  has_many   :cycle_times,
+             :dependent => :destroy
+
   belongs_to :user
 
   # Indirect associations
