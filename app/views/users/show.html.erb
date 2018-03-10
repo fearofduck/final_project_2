@@ -20,3 +20,313 @@
     </div>
   </div>
 </div>
+
+<!-- A User has many conv_seas -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Conv Seas
+      </li>
+
+      <% @user.conv_seas.each do |conv_sea| %>
+        <li class="list-group-item">
+          <a href="/conv_seas/<%= conv_sea.id %>">
+            <%= conv_sea.jan %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/conv_seas/<%= conv_sea.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/conv_seas/<%= conv_sea.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_conv_sea/<%= conv_sea.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many ds53_seas -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Ds53 Seas
+      </li>
+
+      <% @user.ds53_seas.each do |ds53_sea| %>
+        <li class="list-group-item">
+          <a href="/ds53_seas/<%= ds53_sea.id %>">
+            <%= ds53_sea.jan %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/ds53_seas/<%= ds53_sea.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/ds53_seas/<%= ds53_sea.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_ds53_sea/<%= ds53_sea.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many ds40_seas -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Ds40 Seas
+      </li>
+
+      <% @user.ds40_seas.each do |ds40_sea| %>
+        <li class="list-group-item">
+          <a href="/ds40_seas/<%= ds40_sea.id %>">
+            <%= ds40_sea.jan %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/ds40_seas/<%= ds40_sea.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/ds40_seas/<%= ds40_sea.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_ds40_sea/<%= ds40_sea.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many seasonalities -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Seasonalities
+      </li>
+
+      <% @user.seasonalities.each do |seasonality| %>
+        <li class="list-group-item">
+          <a href="/seasonalities/<%= seasonality.id %>">
+            <%= seasonality.scenario %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/seasonalities/<%= seasonality.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/seasonalities/<%= seasonality.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_seasonality/<%= seasonality.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many ds40_cts -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Ds40 Cts
+      </li>
+
+      <% @user.ds40_cts.each do |ds40_ct| %>
+        <li class="list-group-item">
+          <a href="/ds40_cts/<%= ds40_ct.id %>">
+            <%= ds40_ct.jan %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/ds40_cts/<%= ds40_ct.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/ds40_cts/<%= ds40_ct.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_ds40_ct/<%= ds40_ct.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many ds53_cts -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Ds53 Cts
+      </li>
+
+      <% @user.ds53_cts.each do |ds53_ct| %>
+        <li class="list-group-item">
+          <a href="/ds53_cts/<%= ds53_ct.id %>">
+            <%= ds53_ct.jan %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/ds53_cts/<%= ds53_ct.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/ds53_cts/<%= ds53_ct.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_ds53_ct/<%= ds53_ct.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many conv_cts -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Conv Cts
+      </li>
+
+      <% @user.conv_cts.each do |conv_ct| %>
+        <li class="list-group-item">
+          <a href="/conv_cts/<%= conv_ct.id %>">
+            <%= conv_ct.jan %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/conv_cts/<%= conv_ct.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/conv_cts/<%= conv_ct.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_conv_ct/<%= conv_ct.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many cycle_times -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Cycle Times
+      </li>
+
+      <% @user.cycle_times.each do |cycle_time| %>
+        <li class="list-group-item">
+          <a href="/cycle_times/<%= cycle_time.id %>">
+            <%= cycle_time.scenario %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/cycle_times/<%= cycle_time.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/cycle_times/<%= cycle_time.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_cycle_time/<%= cycle_time.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many forecasts -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Forecasts
+      </li>
+
+      <% @user.forecasts.each do |forecast| %>
+        <li class="list-group-item">
+          <a href="/forecasts/<%= forecast.id %>">
+            <%= forecast.ds40_growth %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/forecasts/<%= forecast.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/forecasts/<%= forecast.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_forecast/<%= forecast.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many comments -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Comments
+      </li>
+
+      <% @user.comments.each do |comment| %>
+        <li class="list-group-item">
+          <a href="/comments/<%= comment.id %>">
+            <%= comment.user_id %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/comments/<%= comment.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/comments/<%= comment.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_comment/<%= comment.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -62,3 +62,34 @@
     </div>
   </div>
 </div>
+
+<!-- A Conv ct has many cycle_times -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Cycle Times
+      </li>
+
+      <% @conv_ct.cycle_times.each do |cycle_time| %>
+        <li class="list-group-item">
+          <a href="/cycle_times/<%= cycle_time.id %>">
+            <%= cycle_time.scenario %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/cycle_times/<%= cycle_time.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/cycle_times/<%= cycle_time.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_cycle_time/<%= cycle_time.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
