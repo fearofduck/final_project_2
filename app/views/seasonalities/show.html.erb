@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h3>Seasonality #<%= @seasonality.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Scenario</dt>
+      <dd><%= @seasonality.scenario %></dd>
+
+      <dt>Ds40 seas</dt>
+      <dd><%= @seasonality.ds40_seas_id %></dd>
+
+      <dt>Ds53 seas</dt>
+      <dd><%= @seasonality.ds53_seas_id %></dd>
+
+      <dt>Conv seas</dt>
+      <dd><%= @seasonality.conv_seas_id %></dd>
+
+      <dt>User</dt>
+      <dd><%= @seasonality.user_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/seasonalities" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/seasonalities/<%= @seasonality.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_seasonality/<%= @seasonality.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

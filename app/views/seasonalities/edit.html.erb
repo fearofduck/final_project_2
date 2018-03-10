@@ -1,0 +1,73 @@
+<!-- Validation failure messages -->
+<% if @seasonality.errors.any? %>
+  <% @seasonality.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Seasonality #<%= @seasonality.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_seasonality/<%= @seasonality.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for scenario -->
+      <div class="form-group">
+        <label for="scenario" class="control-label">
+          Scenario
+        </label>
+
+        <input type="text" id="scenario" name="scenario" placeholder="Scenario" class="form-control" value="<%= @seasonality.scenario %>">
+      </div>
+
+      <!-- Label and input for ds40_seas_id -->
+      <div class="form-group">
+        <label for="ds40_seas_id" class="control-label">
+          Ds40 seas
+        </label>
+
+        <input type="text" id="ds40_seas_id" name="ds40_seas_id" placeholder="Ds40 seas" class="form-control" value="<%= @seasonality.ds40_seas_id %>">
+      </div>
+
+      <!-- Label and input for ds53_seas_id -->
+      <div class="form-group">
+        <label for="ds53_seas_id" class="control-label">
+          Ds53 seas
+        </label>
+
+        <input type="text" id="ds53_seas_id" name="ds53_seas_id" placeholder="Ds53 seas" class="form-control" value="<%= @seasonality.ds53_seas_id %>">
+      </div>
+
+      <!-- Label and input for conv_seas_id -->
+      <div class="form-group">
+        <label for="conv_seas_id" class="control-label">
+          Conv seas
+        </label>
+
+        <input type="text" id="conv_seas_id" name="conv_seas_id" placeholder="Conv seas" class="form-control" value="<%= @seasonality.conv_seas_id %>">
+      </div>
+
+      <!-- Label and input for user_id -->
+      <div class="form-group">
+        <label for="user_id" class="control-label">
+          User
+        </label>
+
+        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @seasonality.user_id %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Seasonality
+      </button>
+      or
+      <a href="/seasonalities/<%= @seasonality.id %>">Cancel</a>
+    </form>
+  </div>
+</div>
