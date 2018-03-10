@@ -33,7 +33,7 @@
           Ds40 ct
         </label>
 
-        <input type="text" id="ds40_ct_id" name="ds40_ct_id" placeholder="Ds40 ct" class="form-control" value="<%= @cycle_time.ds40_ct_id %>">
+        <%= select_tag(:ds40_ct_id, options_from_collection_for_select(Ds40Ct.all, :id, :jan, @cycle_time.ds40_ct_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for conv_ct_id -->
