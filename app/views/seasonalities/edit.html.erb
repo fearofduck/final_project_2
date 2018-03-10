@@ -51,7 +51,7 @@
           Conv seas
         </label>
 
-        <input type="text" id="conv_seas_id" name="conv_seas_id" placeholder="Conv seas" class="form-control" value="<%= @seasonality.conv_seas_id %>">
+        <%= select_tag(:conv_seas_id, options_from_collection_for_select(ConvSea.all, :id, :jan, @seasonality.conv_seas_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for user_id -->
