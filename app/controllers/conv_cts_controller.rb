@@ -1,6 +1,7 @@
 class ConvCtsController < ApplicationController
   def index
-    @conv_cts = ConvCt.page(params[:page]).per(10)
+    @q = ConvCt.ransack(params[:q])
+    @conv_cts = @q.result(:distinct => true).includes(:user, :cycle_times).page(params[:page]).per(10)
 
     render("conv_cts/index.html.erb")
   end

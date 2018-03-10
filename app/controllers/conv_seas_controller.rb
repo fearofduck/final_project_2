@@ -10,7 +10,8 @@ class ConvSeasController < ApplicationController
   end
 
   def index
-    @conv_seas = ConvSea.page(params[:page]).per(10)
+    @q = ConvSea.ransack(params[:q])
+    @conv_seas = @q.result(:distinct => true).includes(:user, :seasonalities).page(params[:page]).per(10)
 
     render("conv_seas/index.html.erb")
   end

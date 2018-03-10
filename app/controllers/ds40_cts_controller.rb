@@ -1,6 +1,7 @@
 class Ds40CtsController < ApplicationController
   def index
-    @ds40_cts = Ds40Ct.page(params[:page]).per(10)
+    @q = Ds40Ct.ransack(params[:q])
+    @ds40_cts = @q.result(:distinct => true).includes(:user, :cycle_times).page(params[:page]).per(10)
 
     render("ds40_cts/index.html.erb")
   end

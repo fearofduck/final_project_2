@@ -1,6 +1,7 @@
 class Ds53SeasController < ApplicationController
   def index
-    @ds53_seas = Ds53Sea.page(params[:page]).per(10)
+    @q = Ds53Sea.ransack(params[:q])
+    @ds53_seas = @q.result(:distinct => true).includes(:user, :seasonalities).page(params[:page]).per(10)
 
     render("ds53_seas/index.html.erb")
   end

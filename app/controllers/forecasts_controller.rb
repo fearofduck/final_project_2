@@ -1,6 +1,7 @@
 class ForecastsController < ApplicationController
   def index
-    @forecasts = Forecast.page(params[:page]).per(10)
+    @q = Forecast.ransack(params[:q])
+    @forecasts = @q.result(:distinct => true).includes(:user, :seasonality, :cycle_time, :comments).page(params[:page]).per(10)
 
     render("forecasts/index.html.erb")
   end
