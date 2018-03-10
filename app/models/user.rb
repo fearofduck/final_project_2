@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :seasonalities,
+             :dependent => :destroy
+
   has_many   :ds40_seas,
              :dependent => :destroy
 
