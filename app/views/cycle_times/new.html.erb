@@ -51,7 +51,7 @@
           Ds53 ct
         </label>
 
-        <input type="text" id="ds53_ct_id" name="ds53_ct_id" placeholder="Ds53 ct" class="form-control" value="<%= @cycle_time.ds53_ct_id %>">
+        <%= select_tag(:ds53_ct_id, options_from_collection_for_select(Ds53Ct.all, :id, :jan, @cycle_time.ds53_ct_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for user_id -->
