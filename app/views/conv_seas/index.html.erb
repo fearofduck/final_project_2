@@ -1,0 +1,54 @@
+<div class="page-header">
+  <h1>
+    Conv seas
+    <a href="/conv_seas/new" class="btn btn-lg btn-success">New Conv sea</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Jan</th>
+        <th>Feb</th>
+        <th>Mar</th>
+        <th>Apr</th>
+        <th>May</th>
+        <th>Jun</th>
+        <th>Jul</th>
+        <th>Aug</th>
+        <th>Sep</th>
+        <th>Oct</th>
+        <th>Nov</th>
+        <th>Dec</th>
+        <th>Name</th>
+        <th>User</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @conv_seas.each do |conv_sea| %>
+      <tr>
+        <td><%= conv_sea.jan %></td>
+        <td><%= conv_sea.feb %></td>
+        <td><%= conv_sea.mar %></td>
+        <td><%= conv_sea.apr %></td>
+        <td><%= conv_sea.may %></td>
+        <td><%= conv_sea.jun %></td>
+        <td><%= conv_sea.jul %></td>
+        <td><%= conv_sea.aug %></td>
+        <td><%= conv_sea.sep %></td>
+        <td><%= conv_sea.oct %></td>
+        <td><%= conv_sea.nov %></td>
+        <td><%= conv_sea.dec %></td>
+        <td><%= conv_sea.name %></td>
+        <td><%= conv_sea.user_id %></td>
+        <td>
+          <a href="/conv_seas/<%= conv_sea.id %>" class="btn btn-primary">Show</a>
+          <a href="/conv_seas/<%= conv_sea.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_conv_sea/<%= conv_sea.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

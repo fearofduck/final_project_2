@@ -1,0 +1,64 @@
+<div class="page-header">
+  <h3>Conv Sea #<%= @conv_sea.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Jan</dt>
+      <dd><%= @conv_sea.jan %></dd>
+
+      <dt>Feb</dt>
+      <dd><%= @conv_sea.feb %></dd>
+
+      <dt>Mar</dt>
+      <dd><%= @conv_sea.mar %></dd>
+
+      <dt>Apr</dt>
+      <dd><%= @conv_sea.apr %></dd>
+
+      <dt>May</dt>
+      <dd><%= @conv_sea.may %></dd>
+
+      <dt>Jun</dt>
+      <dd><%= @conv_sea.jun %></dd>
+
+      <dt>Jul</dt>
+      <dd><%= @conv_sea.jul %></dd>
+
+      <dt>Aug</dt>
+      <dd><%= @conv_sea.aug %></dd>
+
+      <dt>Sep</dt>
+      <dd><%= @conv_sea.sep %></dd>
+
+      <dt>Oct</dt>
+      <dd><%= @conv_sea.oct %></dd>
+
+      <dt>Nov</dt>
+      <dd><%= @conv_sea.nov %></dd>
+
+      <dt>Dec</dt>
+      <dd><%= @conv_sea.dec %></dd>
+
+      <dt>Name</dt>
+      <dd><%= @conv_sea.name %></dd>
+
+      <dt>User</dt>
+      <dd><%= @conv_sea.user_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/conv_seas" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/conv_seas/<%= @conv_sea.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_conv_sea/<%= @conv_sea.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
