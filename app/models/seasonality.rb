@@ -1,6 +1,9 @@
 class Seasonality < ApplicationRecord
   # Direct associations
 
+  has_many   :forecasts,
+             :dependent => :destroy
+
   belongs_to :conv_seas,
              :class_name => "ConvSea"
 
