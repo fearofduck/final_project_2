@@ -42,7 +42,7 @@
           Conv ct
         </label>
 
-        <input type="text" id="conv_ct_id" name="conv_ct_id" placeholder="Conv ct" class="form-control" value="<%= @cycle_time.conv_ct_id %>">
+        <%= select_tag(:conv_ct_id, options_from_collection_for_select(ConvCt.all, :id, :jan, @cycle_time.conv_ct_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for ds53_ct_id -->
