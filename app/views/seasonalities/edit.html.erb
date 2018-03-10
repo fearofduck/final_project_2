@@ -42,7 +42,7 @@
           Ds53 seas
         </label>
 
-        <input type="text" id="ds53_seas_id" name="ds53_seas_id" placeholder="Ds53 seas" class="form-control" value="<%= @seasonality.ds53_seas_id %>">
+        <%= select_tag(:ds53_seas_id, options_from_collection_for_select(Ds53Sea.all, :id, :jan, @seasonality.ds53_seas_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for conv_seas_id -->
