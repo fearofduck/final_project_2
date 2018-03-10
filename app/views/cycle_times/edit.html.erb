@@ -1,0 +1,73 @@
+<!-- Validation failure messages -->
+<% if @cycle_time.errors.any? %>
+  <% @cycle_time.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Cycle Time #<%= @cycle_time.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_cycle_time/<%= @cycle_time.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for scenario -->
+      <div class="form-group">
+        <label for="scenario" class="control-label">
+          Scenario
+        </label>
+
+        <input type="text" id="scenario" name="scenario" placeholder="Scenario" class="form-control" value="<%= @cycle_time.scenario %>">
+      </div>
+
+      <!-- Label and input for ds40_ct_id -->
+      <div class="form-group">
+        <label for="ds40_ct_id" class="control-label">
+          Ds40 ct
+        </label>
+
+        <input type="text" id="ds40_ct_id" name="ds40_ct_id" placeholder="Ds40 ct" class="form-control" value="<%= @cycle_time.ds40_ct_id %>">
+      </div>
+
+      <!-- Label and input for conv_ct_id -->
+      <div class="form-group">
+        <label for="conv_ct_id" class="control-label">
+          Conv ct
+        </label>
+
+        <input type="text" id="conv_ct_id" name="conv_ct_id" placeholder="Conv ct" class="form-control" value="<%= @cycle_time.conv_ct_id %>">
+      </div>
+
+      <!-- Label and input for ds53_ct_id -->
+      <div class="form-group">
+        <label for="ds53_ct_id" class="control-label">
+          Ds53 ct
+        </label>
+
+        <input type="text" id="ds53_ct_id" name="ds53_ct_id" placeholder="Ds53 ct" class="form-control" value="<%= @cycle_time.ds53_ct_id %>">
+      </div>
+
+      <!-- Label and input for user_id -->
+      <div class="form-group">
+        <label for="user_id" class="control-label">
+          User
+        </label>
+
+        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @cycle_time.user_id %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Cycle Time
+      </button>
+      or
+      <a href="/cycle_times/<%= @cycle_time.id %>">Cancel</a>
+    </form>
+  </div>
+</div>
