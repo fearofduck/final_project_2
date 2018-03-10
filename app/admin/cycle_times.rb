@@ -1,4 +1,6 @@
 ActiveAdmin.register CycleTime do
+
+ permit_params :scenario, :ds40_ct_id, :conv_ct_id, :ds53_ct_id, :user_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
