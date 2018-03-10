@@ -1,6 +1,6 @@
 class Ds53CtsController < ApplicationController
   def index
-    @ds53_cts = Ds53Ct.all
+    @ds53_cts = Ds53Ct.page(params[:page]).per(10)
 
     render("ds53_cts/index.html.erb")
   end

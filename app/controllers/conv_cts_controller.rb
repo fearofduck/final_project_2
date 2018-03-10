@@ -1,6 +1,6 @@
 class ConvCtsController < ApplicationController
   def index
-    @conv_cts = ConvCt.all
+    @conv_cts = ConvCt.page(params[:page]).per(10)
 
     render("conv_cts/index.html.erb")
   end

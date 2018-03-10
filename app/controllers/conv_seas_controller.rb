@@ -10,7 +10,7 @@ class ConvSeasController < ApplicationController
   end
 
   def index
-    @conv_seas = ConvSea.all
+    @conv_seas = ConvSea.page(params[:page]).per(10)
 
     render("conv_seas/index.html.erb")
   end

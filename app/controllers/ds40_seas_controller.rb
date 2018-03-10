@@ -1,6 +1,6 @@
 class Ds40SeasController < ApplicationController
   def index
-    @ds40_seas = Ds40Sea.all
+    @ds40_seas = Ds40Sea.page(params[:page]).per(10)
 
     render("ds40_seas/index.html.erb")
   end
