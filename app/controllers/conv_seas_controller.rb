@@ -16,6 +16,7 @@ class ConvSeasController < ApplicationController
   end
 
   def show
+    @seasonality = Seasonality.new
     @conv_sea = ConvSea.find(params[:id])
 
     render("conv_seas/show.html.erb")

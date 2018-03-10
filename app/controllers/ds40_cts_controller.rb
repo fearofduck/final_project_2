@@ -6,6 +6,7 @@ class Ds40CtsController < ApplicationController
   end
 
   def show
+    @cycle_time = CycleTime.new
     @ds40_ct = Ds40Ct.find(params[:id])
 
     render("ds40_cts/show.html.erb")

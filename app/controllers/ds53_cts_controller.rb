@@ -6,6 +6,7 @@ class Ds53CtsController < ApplicationController
   end
 
   def show
+    @cycle_time = CycleTime.new
     @ds53_ct = Ds53Ct.find(params[:id])
 
     render("ds53_cts/show.html.erb")

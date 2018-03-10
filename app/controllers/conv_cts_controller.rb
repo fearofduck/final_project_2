@@ -6,6 +6,7 @@ class ConvCtsController < ApplicationController
   end
 
   def show
+    @cycle_time = CycleTime.new
     @conv_ct = ConvCt.find(params[:id])
 
     render("conv_cts/show.html.erb")

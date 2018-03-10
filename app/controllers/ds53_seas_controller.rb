@@ -6,6 +6,7 @@ class Ds53SeasController < ApplicationController
   end
 
   def show
+    @seasonality = Seasonality.new
     @ds53_sea = Ds53Sea.find(params[:id])
 
     render("ds53_seas/show.html.erb")
