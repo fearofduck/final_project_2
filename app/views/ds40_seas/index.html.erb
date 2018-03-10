@@ -1,0 +1,54 @@
+<div class="page-header">
+  <h1>
+    Ds40 seas
+    <a href="/ds40_seas/new" class="btn btn-lg btn-success">New Ds40 sea</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Jan</th>
+        <th>Feb</th>
+        <th>Mar</th>
+        <th>Apr</th>
+        <th>May</th>
+        <th>Jun</th>
+        <th>Jul</th>
+        <th>Aug</th>
+        <th>Sep</th>
+        <th>Oct</th>
+        <th>Nov</th>
+        <th>Dec</th>
+        <th>Name</th>
+        <th>User</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @ds40_seas.each do |ds40_sea| %>
+      <tr>
+        <td><%= ds40_sea.jan %></td>
+        <td><%= ds40_sea.feb %></td>
+        <td><%= ds40_sea.mar %></td>
+        <td><%= ds40_sea.apr %></td>
+        <td><%= ds40_sea.may %></td>
+        <td><%= ds40_sea.jun %></td>
+        <td><%= ds40_sea.jul %></td>
+        <td><%= ds40_sea.aug %></td>
+        <td><%= ds40_sea.sep %></td>
+        <td><%= ds40_sea.oct %></td>
+        <td><%= ds40_sea.nov %></td>
+        <td><%= ds40_sea.dec %></td>
+        <td><%= ds40_sea.name %></td>
+        <td><%= ds40_sea.user_id %></td>
+        <td>
+          <a href="/ds40_seas/<%= ds40_sea.id %>" class="btn btn-primary">Show</a>
+          <a href="/ds40_seas/<%= ds40_sea.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_ds40_sea/<%= ds40_sea.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
