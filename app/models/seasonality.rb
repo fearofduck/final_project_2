@@ -1,6 +1,9 @@
 class Seasonality < ApplicationRecord
   # Direct associations
 
+  belongs_to :conv_seas,
+             :class_name => "ConvSea"
+
   belongs_to :ds53_seas,
              :class_name => "Ds53Sea"
 
