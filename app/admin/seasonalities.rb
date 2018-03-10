@@ -1,4 +1,6 @@
 ActiveAdmin.register Seasonality do
+
+ permit_params :scenario, :ds40_seas_id, :ds53_seas_id, :conv_seas_id, :user_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
