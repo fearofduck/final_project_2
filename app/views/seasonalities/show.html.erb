@@ -9,16 +9,40 @@
       <dd><%= @seasonality.scenario %></dd>
 
       <dt>Ds40 seas</dt>
-      <dd><%= @seasonality.ds40_seas_id %></dd>
+      <dd>
+        <% if @seasonality.ds40_seas.present? %>
+          <a href="/ds40_seas/<%= @seasonality.ds40_seas_id %>">
+            <%= @seasonality.ds40_seas.jan %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Ds53 seas</dt>
-      <dd><%= @seasonality.ds53_seas_id %></dd>
+      <dd>
+        <% if @seasonality.ds53_seas.present? %>
+          <a href="/ds53_seas/<%= @seasonality.ds53_seas_id %>">
+            <%= @seasonality.ds53_seas.jan %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Conv seas</dt>
-      <dd><%= @seasonality.conv_seas_id %></dd>
+      <dd>
+        <% if @seasonality.conv_seas.present? %>
+          <a href="/conv_seas/<%= @seasonality.conv_seas_id %>">
+            <%= @seasonality.conv_seas.jan %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>User</dt>
-      <dd><%= @seasonality.user_id %></dd>
+      <dd>
+        <% if @seasonality.user.present? %>
+          <a href="/users/<%= @seasonality.user_id %>">
+            <%= @seasonality.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

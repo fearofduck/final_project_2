@@ -15,13 +15,31 @@
       <dd><%= @forecast.conv_growth %></dd>
 
       <dt>Cycle time</dt>
-      <dd><%= @forecast.cycle_time_id %></dd>
+      <dd>
+        <% if @forecast.cycle_time.present? %>
+          <a href="/cycle_times/<%= @forecast.cycle_time_id %>">
+            <%= @forecast.cycle_time.scenario %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Seasonality</dt>
-      <dd><%= @forecast.seasonality_id %></dd>
+      <dd>
+        <% if @forecast.seasonality.present? %>
+          <a href="/seasonalities/<%= @forecast.seasonality_id %>">
+            <%= @forecast.seasonality.scenario %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>User</dt>
-      <dd><%= @forecast.user_id %></dd>
+      <dd>
+        <% if @forecast.user.present? %>
+          <a href="/users/<%= @forecast.user_id %>">
+            <%= @forecast.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Intl in 53</dt>
       <dd><%= @forecast.intl_in_53 %></dd>

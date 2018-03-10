@@ -45,7 +45,13 @@
       <dd><%= @ds53_sea.name %></dd>
 
       <dt>User</dt>
-      <dd><%= @ds53_sea.user_id %></dd>
+      <dd>
+        <% if @ds53_sea.user.present? %>
+          <a href="/users/<%= @ds53_sea.user_id %>">
+            <%= @ds53_sea.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

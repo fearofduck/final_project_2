@@ -41,7 +41,13 @@
         <td><%= conv_sea.nov %></td>
         <td><%= conv_sea.dec %></td>
         <td><%= conv_sea.name %></td>
-        <td><%= conv_sea.user.email %></td>
+        <td>
+          <% if conv_sea.user.present? %>
+            <a href="/users/<%= conv_sea.user.id %>">
+              <%= conv_sea.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/conv_seas/<%= conv_sea.id %>" class="btn btn-primary">Show</a>
           

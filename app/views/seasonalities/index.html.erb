@@ -20,10 +20,34 @@
       <% @seasonalities.each do |seasonality| %>
       <tr>
         <td><%= seasonality.scenario %></td>
-        <td><%= seasonality.ds40_seas.jan %></td>
-        <td><%= seasonality.ds53_seas.jan %></td>
-        <td><%= seasonality.conv_seas.jan %></td>
-        <td><%= seasonality.user.email %></td>
+        <td>
+          <% if seasonality.ds40_seas.present? %>
+            <a href="/ds40_seas/<%= seasonality.ds40_seas.id %>">
+              <%= seasonality.ds40_seas.jan %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if seasonality.ds53_seas.present? %>
+            <a href="/ds53_seas/<%= seasonality.ds53_seas.id %>">
+              <%= seasonality.ds53_seas.jan %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if seasonality.conv_seas.present? %>
+            <a href="/conv_seas/<%= seasonality.conv_seas.id %>">
+              <%= seasonality.conv_seas.jan %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if seasonality.user.present? %>
+            <a href="/users/<%= seasonality.user.id %>">
+              <%= seasonality.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/seasonalities/<%= seasonality.id %>" class="btn btn-primary">Show</a>
           <a href="/seasonalities/<%= seasonality.id %>/edit" class="btn btn-warning">Edit</a>

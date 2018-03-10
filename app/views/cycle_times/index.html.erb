@@ -20,10 +20,34 @@
       <% @cycle_times.each do |cycle_time| %>
       <tr>
         <td><%= cycle_time.scenario %></td>
-        <td><%= cycle_time.ds40_ct.jan %></td>
-        <td><%= cycle_time.conv_ct.jan %></td>
-        <td><%= cycle_time.ds53_ct.jan %></td>
-        <td><%= cycle_time.user.email %></td>
+        <td>
+          <% if cycle_time.ds40_ct.present? %>
+            <a href="/ds40_cts/<%= cycle_time.ds40_ct.id %>">
+              <%= cycle_time.ds40_ct.jan %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if cycle_time.conv_ct.present? %>
+            <a href="/conv_cts/<%= cycle_time.conv_ct.id %>">
+              <%= cycle_time.conv_ct.jan %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if cycle_time.ds53_ct.present? %>
+            <a href="/ds53_cts/<%= cycle_time.ds53_ct.id %>">
+              <%= cycle_time.ds53_ct.jan %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if cycle_time.user.present? %>
+            <a href="/users/<%= cycle_time.user.id %>">
+              <%= cycle_time.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/cycle_times/<%= cycle_time.id %>" class="btn btn-primary">Show</a>
           <a href="/cycle_times/<%= cycle_time.id %>/edit" class="btn btn-warning">Edit</a>

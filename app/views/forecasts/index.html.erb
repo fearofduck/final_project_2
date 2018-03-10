@@ -25,9 +25,27 @@
         <td><%= forecast.ds40_growth %></td>
         <td><%= forecast.ds53_growth %></td>
         <td><%= forecast.conv_growth %></td>
-        <td><%= forecast.cycle_time.scenario %></td>
-        <td><%= forecast.seasonality.scenario %></td>
-        <td><%= forecast.user.email %></td>
+        <td>
+          <% if forecast.cycle_time.present? %>
+            <a href="/cycle_times/<%= forecast.cycle_time.id %>">
+              <%= forecast.cycle_time.scenario %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if forecast.seasonality.present? %>
+            <a href="/seasonalities/<%= forecast.seasonality.id %>">
+              <%= forecast.seasonality.scenario %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if forecast.user.present? %>
+            <a href="/users/<%= forecast.user.id %>">
+              <%= forecast.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td><%= forecast.intl_in_53 %></td>
         <td><%= forecast.dc_in_conv %></td>
         <td>

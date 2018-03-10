@@ -9,16 +9,40 @@
       <dd><%= @cycle_time.scenario %></dd>
 
       <dt>Ds40 ct</dt>
-      <dd><%= @cycle_time.ds40_ct_id %></dd>
+      <dd>
+        <% if @cycle_time.ds40_ct.present? %>
+          <a href="/ds40_cts/<%= @cycle_time.ds40_ct_id %>">
+            <%= @cycle_time.ds40_ct.jan %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Conv ct</dt>
-      <dd><%= @cycle_time.conv_ct_id %></dd>
+      <dd>
+        <% if @cycle_time.conv_ct.present? %>
+          <a href="/conv_cts/<%= @cycle_time.conv_ct_id %>">
+            <%= @cycle_time.conv_ct.jan %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Ds53 ct</dt>
-      <dd><%= @cycle_time.ds53_ct_id %></dd>
+      <dd>
+        <% if @cycle_time.ds53_ct.present? %>
+          <a href="/ds53_cts/<%= @cycle_time.ds53_ct_id %>">
+            <%= @cycle_time.ds53_ct.jan %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>User</dt>
-      <dd><%= @cycle_time.user_id %></dd>
+      <dd>
+        <% if @cycle_time.user.present? %>
+          <a href="/users/<%= @cycle_time.user_id %>">
+            <%= @cycle_time.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

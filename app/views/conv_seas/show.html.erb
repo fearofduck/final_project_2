@@ -45,7 +45,13 @@
       <dd><%= @conv_sea.name %></dd>
 
       <dt>User</dt>
-      <dd><%= @conv_sea.user_id %></dd>
+      <dd>
+        <% if @conv_sea.user.present? %>
+          <a href="/users/<%= @conv_sea.user_id %>">
+            <%= @conv_sea.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

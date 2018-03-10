@@ -41,7 +41,13 @@
         <td><%= ds40_sea.nov %></td>
         <td><%= ds40_sea.dec %></td>
         <td><%= ds40_sea.name %></td>
-        <td><%= ds40_sea.user.email %></td>
+        <td>
+          <% if ds40_sea.user.present? %>
+            <a href="/users/<%= ds40_sea.user.id %>">
+              <%= ds40_sea.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/ds40_seas/<%= ds40_sea.id %>" class="btn btn-primary">Show</a>
           <a href="/ds40_seas/<%= ds40_sea.id %>/edit" class="btn btn-warning">Edit</a>

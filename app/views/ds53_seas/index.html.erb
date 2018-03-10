@@ -41,7 +41,13 @@
         <td><%= ds53_sea.nov %></td>
         <td><%= ds53_sea.dec %></td>
         <td><%= ds53_sea.name %></td>
-        <td><%= ds53_sea.user.email %></td>
+        <td>
+          <% if ds53_sea.user.present? %>
+            <a href="/users/<%= ds53_sea.user.id %>">
+              <%= ds53_sea.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/ds53_seas/<%= ds53_sea.id %>" class="btn btn-primary">Show</a>
           <a href="/ds53_seas/<%= ds53_sea.id %>/edit" class="btn btn-warning">Edit</a>
