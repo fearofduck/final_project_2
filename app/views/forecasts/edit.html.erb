@@ -1,0 +1,100 @@
+<!-- Validation failure messages -->
+<% if @forecast.errors.any? %>
+  <% @forecast.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Forecast #<%= @forecast.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_forecast/<%= @forecast.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for ds40_growth -->
+      <div class="form-group">
+        <label for="ds40_growth" class="control-label">
+          Ds40 growth
+        </label>
+
+        <input type="text" id="ds40_growth" name="ds40_growth" placeholder="Ds40 growth" class="form-control" value="<%= @forecast.ds40_growth %>">
+      </div>
+
+      <!-- Label and input for ds53_growth -->
+      <div class="form-group">
+        <label for="ds53_growth" class="control-label">
+          Ds53 growth
+        </label>
+
+        <input type="text" id="ds53_growth" name="ds53_growth" placeholder="Ds53 growth" class="form-control" value="<%= @forecast.ds53_growth %>">
+      </div>
+
+      <!-- Label and input for conv_growth -->
+      <div class="form-group">
+        <label for="conv_growth" class="control-label">
+          Conv growth
+        </label>
+
+        <input type="text" id="conv_growth" name="conv_growth" placeholder="Conv growth" class="form-control" value="<%= @forecast.conv_growth %>">
+      </div>
+
+      <!-- Label and input for cycle_time_id -->
+      <div class="form-group">
+        <label for="cycle_time_id" class="control-label">
+          Cycle time
+        </label>
+
+        <input type="text" id="cycle_time_id" name="cycle_time_id" placeholder="Cycle time" class="form-control" value="<%= @forecast.cycle_time_id %>">
+      </div>
+
+      <!-- Label and input for seasonality_id -->
+      <div class="form-group">
+        <label for="seasonality_id" class="control-label">
+          Seasonality
+        </label>
+
+        <input type="text" id="seasonality_id" name="seasonality_id" placeholder="Seasonality" class="form-control" value="<%= @forecast.seasonality_id %>">
+      </div>
+
+      <!-- Label and input for user_id -->
+      <div class="form-group">
+        <label for="user_id" class="control-label">
+          User
+        </label>
+
+        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @forecast.user_id %>">
+      </div>
+
+      <!-- Label and input for intl_in_53 -->
+      <div class="form-group">
+        <label for="intl_in_53" class="control-label">
+          Intl in 53
+        </label>
+
+        <input type="text" id="intl_in_53" name="intl_in_53" placeholder="Intl in 53" class="form-control" value="<%= @forecast.intl_in_53 %>">
+      </div>
+
+      <!-- Label and input for dc_in_conv -->
+      <div class="form-group">
+        <label for="dc_in_conv" class="control-label">
+          Dc in conv
+        </label>
+
+        <input type="text" id="dc_in_conv" name="dc_in_conv" placeholder="Dc in conv" class="form-control" value="<%= @forecast.dc_in_conv %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Forecast
+      </button>
+      or
+      <a href="/forecasts/<%= @forecast.id %>">Cancel</a>
+    </form>
+  </div>
+</div>
