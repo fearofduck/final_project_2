@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Conv_ct resource:
+  # CREATE
+  get "/conv_cts/new", :controller => "conv_cts", :action => "new"
+  post "/create_conv_ct", :controller => "conv_cts", :action => "create"
+
+  # READ
+  get "/conv_cts", :controller => "conv_cts", :action => "index"
+  get "/conv_cts/:id", :controller => "conv_cts", :action => "show"
+
+  # UPDATE
+  get "/conv_cts/:id/edit", :controller => "conv_cts", :action => "edit"
+  post "/update_conv_ct/:id", :controller => "conv_cts", :action => "update"
+
+  # DELETE
+  get "/delete_conv_ct/:id", :controller => "conv_cts", :action => "destroy"
+  #------------------------------
+
   # Routes for the Ds53_ct resource:
   # CREATE
   get "/ds53_cts/new", :controller => "ds53_cts", :action => "new"
