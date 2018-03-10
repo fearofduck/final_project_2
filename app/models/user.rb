@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :cycle_times,
+             :dependent => :destroy
+
   has_many   :conv_cts,
              :dependent => :destroy
 
