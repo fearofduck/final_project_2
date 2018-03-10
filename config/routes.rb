@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Ds40_ct resource:
+  # CREATE
+  get "/ds40_cts/new", :controller => "ds40_cts", :action => "new"
+  post "/create_ds40_ct", :controller => "ds40_cts", :action => "create"
+
+  # READ
+  get "/ds40_cts", :controller => "ds40_cts", :action => "index"
+  get "/ds40_cts/:id", :controller => "ds40_cts", :action => "show"
+
+  # UPDATE
+  get "/ds40_cts/:id/edit", :controller => "ds40_cts", :action => "edit"
+  post "/update_ds40_ct/:id", :controller => "ds40_cts", :action => "update"
+
+  # DELETE
+  get "/delete_ds40_ct/:id", :controller => "ds40_cts", :action => "destroy"
+  #------------------------------
+
   # Routes for the Seasonality resource:
   # CREATE
   get "/seasonalities/new", :controller => "seasonalities", :action => "new"

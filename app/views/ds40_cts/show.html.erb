@@ -1,0 +1,64 @@
+<div class="page-header">
+  <h3>Ds40 Ct #<%= @ds40_ct.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Jan</dt>
+      <dd><%= @ds40_ct.jan %></dd>
+
+      <dt>Feb</dt>
+      <dd><%= @ds40_ct.feb %></dd>
+
+      <dt>Mar</dt>
+      <dd><%= @ds40_ct.mar %></dd>
+
+      <dt>Apr</dt>
+      <dd><%= @ds40_ct.apr %></dd>
+
+      <dt>May</dt>
+      <dd><%= @ds40_ct.may %></dd>
+
+      <dt>Jun</dt>
+      <dd><%= @ds40_ct.jun %></dd>
+
+      <dt>Jul</dt>
+      <dd><%= @ds40_ct.jul %></dd>
+
+      <dt>Aug</dt>
+      <dd><%= @ds40_ct.aug %></dd>
+
+      <dt>Sep</dt>
+      <dd><%= @ds40_ct.sep %></dd>
+
+      <dt>Oct</dt>
+      <dd><%= @ds40_ct.oct %></dd>
+
+      <dt>Nov</dt>
+      <dd><%= @ds40_ct.nov %></dd>
+
+      <dt>Dec</dt>
+      <dd><%= @ds40_ct.dec %></dd>
+
+      <dt>Name</dt>
+      <dd><%= @ds40_ct.name %></dd>
+
+      <dt>User</dt>
+      <dd><%= @ds40_ct.user_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/ds40_cts" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/ds40_cts/<%= @ds40_ct.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_ds40_ct/<%= @ds40_ct.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
